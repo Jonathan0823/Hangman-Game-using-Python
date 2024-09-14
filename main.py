@@ -57,6 +57,10 @@ def main():
                 print("Invalid input")
                 continue
             
+            if guess in guessed_answer:
+                print(f"{guess} has already been guessed")
+                continue
+
             if guess in answer:
                 for i in range(len(answer)):
                     if answer[i] == guess:
